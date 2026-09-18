@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Scriptbox Tales - Double B</title>
   <link rel="manifest" href="manifest.json">
-  <script src="https://tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Hard-coded raw structural overrides to force web browser engines to obey boundaries -->
+  <style>
+    html, body {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100vw !important;
+      max-height: 100dvh !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+    }
+    video {
+      max-width: 100% !important;
+      max-height: 100% !important;
+      display: block !important;
+    }
+  </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 flex justify-center items-center min-h-screen select-none m-0 overflow-hidden w-full h-[100dvh]">
+<body class="bg-zinc-950 text-zinc-100 flex justify-center items-center select-none overflow-hidden w-full h-[100dvh]">
 
-  <!-- Main Locked Viewport Container -->
+  <!-- Main Locked Viewport Container: Strictly forces the physical screen window size -->
   <div class="w-full h-[100dvh] max-w-md max-h-[850px] shadow-2xl flex flex-col justify-between overflow-hidden relative border border-zinc-800/50 bg-zinc-900 landscape:max-w-none landscape:max-h-none landscape:border-none landscape:h-screen landscape:w-screen">
     
     <!-- Header Overlay -->
@@ -23,12 +40,13 @@
       </span>
     </header>
 
-    <!-- Locked Video Section Box -->
-    <div class="flex-1 bg-black flex justify-center items-center relative h-full w-full overflow-hidden">
-      <!-- HARD VIDEO LOCK: Forces the actual video file to NEVER exceed the phone box boundaries -->
+    <!-- Hard-Locked Black Box Video Section Container -->
+    <div class="flex-1 bg-black flex items-center justify-center relative w-full h-full overflow-hidden max-w-full max-h-full">
+      <!-- THE FIX: Rigid, raw inline formatting variables that block the browser from expanding the widescreen file sideways -->
       <video 
         id="main-player" 
-        class="max-w-full max-h-full w-full h-full object-contain landscape:object-contain"
+        style="width: 100% !important; max-width: 100% !important; height: auto !important; aspect-ratio: 16/9 !important;"
+        class="object-contain landscape:!h-full landscape:!w-full landscape:!max-w-none landscape:!aspect-none"
         controls
         preload="auto"
         playsinline
@@ -38,7 +56,7 @@
     </div>
 
     <!-- Bottom Navigation Dashboard -->
-    <footer class="p-4 bg-gradient-to-t from-black to-zinc-950 border-t border-zinc-800/50 z-10 landscape:hidden">
+    <footer class="p-4 bg-gradient-to-t from-black to-zinc-950 border-t border-zinc-800/50 z-10 landscape:hidden w-full">
       <div class="mb-3">
         <h2 id="episode-title" class="font-bold text-sm text-zinc-200">Episode 1: Double B Station</h2>
         <p class="text-xs text-zinc-500">Scriptbox Tales Production</p>
