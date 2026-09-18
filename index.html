@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Scriptbox Tales - Double B</title>
   <link rel="manifest" href="manifest.json">
   <script src="https://tailwindcss.com"></script>
 </head>
 <body class="bg-zinc-950 text-zinc-100 flex justify-center items-center min-h-screen select-none m-0 overflow-hidden">
 
-  <!-- Main Responsive Container -->
-  <!-- PORTRAIT: Looks like a mobile mockup app box | LANDSCAPE: Expands to full screen instantly -->
-  <div class="w-full h-screen max-w-md max-h-[850px] shadow-2xl flex flex-col justify-between overflow-hidden relative border border-zinc-800/50 bg-zinc-900
-              landscape:max-w-none landscape:max-h-none landscape:border-none landscape:h-screen landscape:w-screen">
+  <!-- Main Locked Viewport Container -->
+  <div class="w-full h-[100dvh] max-w-md max-h-[850px] shadow-2xl flex flex-col justify-between overflow-hidden relative border border-zinc-800/50 bg-zinc-900 landscape:max-w-none landscape:max-h-none landscape:border-none landscape:h-screen landscape:w-screen">
     
-    <!-- Header: Automatically hidden in landscape to save movie screen space -->
+    <!-- Header Overlay -->
     <header class="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 to-transparent z-10 flex justify-between items-center landscape:hidden">
       <div>
         <h1 class="font-bold text-lg text-amber-500 tracking-wide">DOUBLE B</h1>
@@ -25,12 +23,11 @@
       </span>
     </header>
 
-    <!-- Main Video Player Section -->
-    <div class="flex-1 bg-black flex justify-center items-center relative h-full w-full">
-      <!-- PORTRAIT: Standard contain layout | LANDSCAPE: Forces raw 16:9 full-screen immersion -->
+    <!-- Locked Video Section Box -->
+    <div class="flex-1 bg-black flex justify-center items-center relative h-full w-full overflow-hidden">
       <video 
         id="main-player" 
-        class="w-full h-full object-contain landscape:object-fill"
+        class="w-full h-full object-contain landscape:object-contain"
         controls
         preload="auto"
         playsinline
@@ -39,7 +36,7 @@
       </video>
     </div>
 
-    <!-- Bottom Navigation Dashboard: Automatically hidden in landscape mode -->
+    <!-- Bottom Navigation Dashboard -->
     <footer class="p-4 bg-gradient-to-t from-black to-zinc-950 border-t border-zinc-800/50 z-10 landscape:hidden">
       <div class="mb-3">
         <h2 id="episode-title" class="font-bold text-sm text-zinc-200">Episode 1: Double B Station</h2>
@@ -69,3 +66,4 @@
 
 </body>
 </html>
+
