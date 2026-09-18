@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scriptbox Tales - Double B</title>
+  <link rel="manifest" href="manifest.json">
+  <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 text-zinc-100 flex justify-center items-center min-h-screen select-none m-0 overflow-hidden">
+
+  <!-- Main Responsive Container -->
+  <!-- PORTRAIT: Looks like a mobile mockup app box | LANDSCAPE: Expands to full screen instantly -->
+  <div class="w-full h-screen max-w-md max-h-[850px] shadow-2xl flex flex-col justify-between overflow-hidden relative border border-zinc-800/50 bg-zinc-900
+              landscape:max-w-none landscape:max-h-none landscape:border-none landscape:h-screen landscape:w-screen">
+    
+    <!-- Header: Automatically hidden in landscape to save movie screen space -->
+    <header class="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 to-transparent z-10 flex justify-between items-center landscape:hidden">
+      <div>
+        <h1 class="font-bold text-lg text-amber-500 tracking-wide">DOUBLE B</h1>
+        <p class="text-[10px] text-zinc-400 font-medium">Loyalty, Land & Freedom</p>
+      </div>
+      <span class="bg-amber-600/20 text-amber-400 text-[10px] px-2.5 py-1 rounded-full font-bold border border-amber-500/30 uppercase tracking-widest">
+        Cinema Stream
+      </span>
+    </header>
+
+    <!-- Main Video Player Section -->
+    <div class="flex-1 bg-black flex justify-center items-center relative h-full w-full">
+      <!-- PORTRAIT: Standard contain layout | LANDSCAPE: Forces raw 16:9 full-screen immersion -->
+      <video 
+        id="main-player" 
+        class="w-full h-full object-contain landscape:object-fill"
+        controls
+        preload="auto"
+        playsinline
+        webkit-playsinline
+        src="episode1.mp4">
+      </video>
+    </div>
+
+    <!-- Bottom Navigation Dashboard: Automatically hidden in landscape mode -->
+    <footer class="p-4 bg-gradient-to-t from-black to-zinc-950 border-t border-zinc-800/50 z-10 landscape:hidden">
+      <div class="mb-3">
+        <h2 id="episode-title" class="font-bold text-sm text-zinc-200">Episode 1: Double B Station</h2>
+        <p class="text-xs text-zinc-500">Scriptbox Tales Production</p>
+      </div>
+      
+      <h3 class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-2">Select Episode</h3>
+      <div class="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+        <button onclick="changeVideo('Episode 1: Double B Station', 'episode1.mp4')" class="bg-amber-600 hover:bg-amber-700 text-black px-4 py-2 rounded-lg shrink-0 text-xs font-bold transition duration-200">Ep 1</button>
+        <button onclick="changeVideo('Episode 2: The Confrontation', 'episode2.mp4')" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-4 py-2 rounded-lg shrink-0 text-xs font-bold transition duration-200">Ep 2</button>
+        <button onclick="changeVideo('Episode 3: The Threat Intensifies', 'episode3.mp4')" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-4 py-2 rounded-lg shrink-0 text-xs font-bold transition duration-200">Ep 3</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function changeVideo(title, videoUrl) {
+      document.getElementById('episode-title').innerText = title;
+      const player = document.getElementById('main-player');
+      player.src = videoUrl;
+      player.preload = "auto";
+      player.load();
+      player.play().catch(error => { console.log(error); });
+    }
+  </script>
+
+</body>
+</html>

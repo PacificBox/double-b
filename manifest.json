@@ -1,0 +1,17 @@
+{
+  "short_name": "Unchained",
+  "name": "Audio Unchained Streamer",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#09090b",
+  "theme_color": "#ea580c",
+  "display": "standalone",
+  "orientation": "any"
+}
