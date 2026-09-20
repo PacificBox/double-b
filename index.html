@@ -70,7 +70,17 @@
 
   </div>
 
-  <script>
+    <script>
+    // 1. ADD THIS NEW CODE: Registers the Service Worker so the browser lets you install the app
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('Service Worker registered successfully:', reg.scope))
+          .catch(err => console.log('Service Worker registration failed:', err));
+      });
+    }
+
+    // 2. KEEP YOUR EXISTING CODE: This runs your episode switching
     function changeVideo(title, videoUrl) {
       document.getElementById('episode-title').innerText = title;
       const player = document.getElementById('main-player');
