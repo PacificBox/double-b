@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>PacificBox - Double B</title>
-  <link rel="icon" type="image/png" href="PacificBox.png" sizes="512x512" style="object-fit: contain; background: #0a1128; border-radius: 15%;">
-  <link rel="apple-touch-icon" href="PacificBox.png" style="object-fit: contain; background: #0a1128;">
+  <link rel="icon" type="image/png" href="PacificBox.png">
+  <link rel="apple-touch-icon" href="PacificBox.png">
   <link rel="manifest" href="manifest.json">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://tailwindcss.com"></script>
+  <!-- Hard-coded raw structural overrides to force web browser engines to obey boundaries -->
+  <style>
     html, body {
       width: 100% !important;
       height: 100% !important;
@@ -22,6 +24,9 @@
       max-height: 100% !important;
       display: block !important;
     }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-50 flex items-center justify-center p-0 m-0 w-full h-full overflow-hidden select-none touch-none antialiased">
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 flex justify-center items-center select-none overflow-hidden w-full h-[100dvh]">
