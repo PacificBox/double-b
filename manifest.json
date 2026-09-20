@@ -1,17 +1,17 @@
 {
-  "short_name": "Unchained",
-  "name": "Audio Unchained Streamer",
+  "short_name": "PacificBox",
+  "name": "PacificBox Cinematic Stream",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "image_2glfHV.png",
       "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "1024x1024",
       "purpose": "any maskable"
     }
   ],
   "start_url": "./index.html",
-  "background_color": "#09090b",
-  "theme_color": "#ea580c",
+  "background_color": "#0a1128",
+  "theme_color": "#00f5d4",
   "display": "standalone",
   "orientation": "any"
 }
