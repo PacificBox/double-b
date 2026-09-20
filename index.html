@@ -10,14 +10,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Hard-coded raw structural overrides to force web browser engines to obey boundaries -->
   <style>
-        html, body {
+    html, body {
       width: 100% !important;
       height: 100% !important;
       max-width: 100vw !important;
       max-height: 100dvh !important;
       margin: 0 !important;
       padding: 0 !important;
-      overflow-y: scroll !important;
+      overflow: hidden !important;
     }
     video {
       max-width: 100% !important;
@@ -27,7 +27,7 @@
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-50 flex items-center justify-center p-0 m-0 w-full h-full overflow-hidden select-none touch-none antialiased">
-  <div class="w-full h-screen max-w-md mx-auto shadow-2xl flex flex-col justify-between overflow-y-visible relative border border-zinc-800/50 bg-zinc-900">
+  <div class="w-full h-full max-w-md mx-auto shadow-2xl flex flex-col justify-between overflow-hidden relative border border-zinc-800/50 bg-zinc-900">
     
     <!-- Header Overlay -->
     <header class="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 to-transparent z-10 flex justify-between items-center landscape:hidden">
@@ -42,11 +42,10 @@
 
     <!-- Hard-Locked Black Box Video Section Container -->
     <div class="flex-1 bg-black flex items-center justify-center relative w-full h-full overflow-hidden max-w-full max-h-full">
-      <!-- THE FIX: Rigid, raw inline formatting variables that block the browser from expanding the widescreen file sideways -->
       <video 
         id="main-player" 
         style="width: 100% !important; max-width: 100% !important; height: auto !important; aspect-ratio: 16/9 !important;"
-        class="object-contain landscape:!h-full landscape:!w-full landscape:!max-w-none landscape:!aspect-none"
+        class="object-contain"
         controls
         preload="auto"
         playsinline
