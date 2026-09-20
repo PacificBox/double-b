@@ -19,6 +19,13 @@
       padding: 0 !important;
       overflow-y: auto !important;
     }
+    /* The Fix: Protects phone screens while unlocking scroll bars on big PC desktop browsers */
+    @media (min-width: 768px) {
+      .max-w-md {
+        overflow-y: auto !important;
+        max-height: 90vh !important;
+      }
+    }
     video {
       max-width: 100% !important;
       max-height: 100% !important;
