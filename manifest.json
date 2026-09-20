@@ -3,9 +3,9 @@
   "name": "PacificBox Cinematic Stream",
   "icons": [
     {
-      "src": "image_2glfHV.png",
+      "src": "PacificBox.png",
       "type": "image/png",
-      "sizes": "1024x1024",
+      "sizes": "512x512",
       "purpose": "any maskable"
     }
   ],
