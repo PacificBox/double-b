@@ -46,33 +46,8 @@
     </div>
 
   </div>
-    <div id="catalogPage" class="absolute bottom-[10%] left-[4%] max-w-[55%] w-full flex flex-row items-center justify-start gap-4 z-20">
-    <!-- Main Branding Header -->
-    <header class="flex justify-between items-center border-b border-zinc-800 pb-4">
-      <div class="flex items-center gap-3">
-        <img src="PacificBox.png" alt="PacificBox Logo" class="w-10 h-10 rounded-lg shadow-lg">
-        <div>
-          <h1 class="font-bold text-xl text-zinc-100 tracking-wide uppercase">PacificBox</h1>
-          <p class="text-xs text-zinc-400 font-medium">Cinematic Stream Network</p>
-        </div>
-      </div>
-      <span class="bg-zinc-800 text-zinc-400 text-xs px-3 py-1.5 rounded-full font-bold border border-zinc-700/50 uppercase tracking-widest">
-        Catalog
-      </span>
-    </header>
-
-      <!-- Series Grid Layout -->
-    <!-- ======================================================== -->
-    <!-- THE VAULT: NETFLIX-STYLE HORIZONTAL GENRE ROWS            -->
-    <!-- ======================================================== -->
-    <div class="flex flex-col gap-8 mt-4">
-      
-      <!-- ROW 1: HISTORICAL THRILLER -->
-      <div class="flex flex-col gap-3">
-        <h2 class="text-sm font-bold text-amber-500 uppercase tracking-wider">Historical Thriller</h2>
-        <div class="flex gap-4 overflow-x-auto pb-3 snap-x scrollbar-thin">
-          
-          <!-- Double B Card (Vertical Movie Poster Style) -->
+  <div id="catalogPage" class="absolute bottom-[10%] left-[4%] w-[18%] aspect-[2/3] z-20 cursor-pointer hover:scale-105 transition shadow-2xl" onclick="openSeries()">
+    <img src="historical.png" alt="Historical Thriller" class="w-full h-full object-cover rounded-xl border border-zinc-800">
           <div onclick="openSeries()" class="min-w-[220px] max-w-[220px] bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden cursor-pointer hover:border-amber-500/50 transition duration-300 snap-start group">
             <div class="vertical-poster w-full bg-zinc-800 relative">
               <img src="historical-thriller.png" alt="Historical Thriller" class="w-full h-full object-cover">
