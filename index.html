@@ -42,26 +42,47 @@
     </header>
 
     <!-- Series Grid Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+    <!-- ======================================================== -->
+    <!-- THE VAULT: NETFLIX-STYLE HORIZONTAL GENRE ROWS            -->
+    <!-- ======================================================== -->
+    <div class="flex flex-col gap-8 mt-4">
       
-      <!-- SERIES CARD 1: DOUBLE B -->
-      <div onclick="openSeries()" class="group cursor-pointer bg-zinc-900/40 border border-zinc-800/60 hover:border-amber-500/40 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-1.5">
-        <!-- Cover Image Display -->
-        <div class="aspect-video w-full overflow-hidden bg-zinc-800 relative">
-          <img src="doubleb-poster.png" alt="Double B Cover" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+      <!-- ROW 1: SCI-FI -->
+      <div class="flex flex-col gap-3">
+        <h2 class="text-sm font-bold text-amber-500 uppercase tracking-wider">Sci-Fi</h2>
+        <div class="flex gap-4 overflow-x-auto pb-3 snap-x scrollbar-thin">
+          
+          <!-- Double B Card (Clicks straight into your player view!) -->
+          <div onclick="openSeries()" class="min-w-[260px] max-w-[260px] bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden cursor-pointer hover:border-amber-500/50 transition duration-300 snap-start group">
+            <div class="aspect-video w-full bg-zinc-800 relative">
+              <img src="doubleb-poster.png" alt="Double B" class="w-full h-full object-cover">
+            </div>
+            <div class="p-3">
+              <h3 class="font-bold text-sm text-white group-hover:text-amber-500 transition-colors">Double B</h3>
+              <p class="text-[11px] text-zinc-400 mt-1 line-clamp-1">Loyalty, Land & Freedom</p>
+            </div>
+          </div>
+
+          <!-- Future Project Placeholder -->
+          <div class="min-w-[260px] max-w-[260px] bg-zinc-900/40 border border-dashed border-zinc-800 rounded-xl p-4 flex flex-col justify-center items-center text-center opacity-40 snap-start">
+            <span class="text-zinc-500 text-sm font-bold">+</span>
+            <p class="text-zinc-400 text-xs font-bold mt-1 uppercase tracking-wide">Project Orion</p>
+          </div>
+
         </div>
-        <!-- Card Text Details -->
-        <div class="p-5">
-          <h2 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors uppercase tracking-wide">Double B</h2>
-          <!-- Slogan Content -->
-          <p class="text-amber-500 text-xs font-bold tracking-wide mt-0.5">Loyalty, Land & Freedom</p>
-          <p class="text-zinc-400 text-xs mt-3 leading-relaxed">Enter the rugged frontier where conflicts ignite, secrets run deep, and survival demands absolute allegiance.</p>
-          <div class="mt-4 text-xs font-semibold text-zinc-500 group-hover:text-amber-400 transition-colors flex items-center gap-1">
-            Open Series Menu <span>→</span>
+      </div>
+
+      <!-- ROW 2: COURTROOM DRAMA -->
+      <div class="flex flex-col gap-3">
+        <h2 class="text-sm font-bold text-amber-500 uppercase tracking-wider">Courtroom Drama</h2>
+        <div class="flex gap-4 overflow-x-auto pb-3 snap-x">
+          <div class="min-w-[260px] max-w-[260px] bg-zinc-900/40 border border-dashed border-zinc-800 rounded-xl p-8 flex flex-col justify-center items-center text-center opacity-30 snap-start">
+            <p class="text-zinc-500 text-xs font-bold uppercase tracking-wider">Coming Soon</p>
           </div>
         </div>
       </div>
+
+    </div>
 
       <!-- SERIES CARD 2: COMING SOON HOOK -->
       <div class="opacity-30 bg-zinc-900/10 border border-dashed border-zinc-800 rounded-xl p-6 flex flex-col justify-center items-center text-center min-h-[300px]">
