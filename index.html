@@ -28,12 +28,17 @@
   <!-- ======================================================== -->
   <div id="landingPosterPage" class="w-full max-w-[1920px] mx-auto bg-zinc-950 flex flex-col justify-start items-center relative overflow-hidden select-none">
     
-        <!-- Fluid Image Wrapper: Matches your Double B poster behavior -->
+       <!-- Fluid Image Wrapper: Matches your Double B poster behavior -->
     <div class="w-full aspect-[16/9] relative z-10 shadow-2xl">
       <img src="landing-poster.png" alt="PacificBox Hub Poster" class="w-full h-full object-contain">
       
-      <!-- Invisible Active Hotspot aligned perfectly to THE VAULT button graphic -->
-      <div class="absolute top-[5%] right-[2.5%] w-[14%] h-[9%] cursor-pointer bg-transparent" onclick="enterTheVault()" title="Enter The Vault"></div>
+      <!-- Interactive, Standalone HTML Button Component -->
+      <button 
+        onclick="enterTheVault()" 
+        title="Enter The Vault"
+        class="absolute top-[5%] right-[3%] w-[13%] h-[7%] min-h-[32px] max-h-[50px] min-w-[100px] max-w-[160px] bg-[#1e293b]/90 hover:bg-[#334155] active:scale-95 text-zinc-100 hover:text-white font-bold rounded-full border border-zinc-700/50 shadow-2xl transition duration-200 uppercase tracking-widest text-[min(1vw,12px)] flex items-center justify-center">
+        The Vault
+      </button>
     </div>
 
   </div>
