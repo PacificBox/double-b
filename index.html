@@ -124,9 +124,9 @@
       });
     }
 
-        // Navigation: Enter Double B view
+            // Navigation: Enter Double B view
     function openSeries() {
-      document.getElementById('landingPosterPage').classList.add('hidden');
+      document.getElementById('landingPosterPage').style.display = 'none'; // <-- Complete nuclear shutoff for Page 1 elements
       document.getElementById('catalogPage').classList.add('hidden');
       document.getElementById('seriesPage').classList.remove('hidden');
       resetToPosterState();
