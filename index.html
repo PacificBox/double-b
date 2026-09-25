@@ -243,11 +243,19 @@
     }
 
     // Navigation: Return to Main Hub Entrance
+        // Navigation: Transition from 5-Column Poster into the Vault Rows
+    function enterTheVault() {
+      document.getElementById('landingPosterPage').classList.add('hidden');
+      document.getElementById('catalogPage').classList.remove('hidden');
+    }
+
+    // Navigation: Return all the way out to the Main Landing Poster
     function goHome() {
       const player = document.getElementById('main-player');
       player.pause();
       document.getElementById('seriesPage').classList.add('hidden');
-      document.getElementById('catalogPage').classList.remove('hidden');
+      document.getElementById('catalogPage').classList.add('hidden');
+      document.getElementById('landingPosterPage').classList.remove('hidden');
     }
 
     // Helper: Reset view back to the custom menu poster screen
