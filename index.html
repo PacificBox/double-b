@@ -23,80 +23,18 @@
 </head>
 <body class="bg-zinc-950 text-zinc-50 font-sans antialiased min-h-screen overflow-y-auto select-none">
 
-    <!-- ======================================================== -->
-  <!-- LEVEL 0: THE PACIFICBOX FIVE-COLUMN CINEMATIC POSTER      -->
   <!-- ======================================================== -->
-  <div id="landingPosterPage" class="w-full min-h-screen bg-black flex flex-col md:flex-row overflow-hidden relative font-sans">
+  <!-- LEVEL 0: THE PACIFICBOX MAIN LANDING POSTER               -->
+  <!-- ======================================================== -->
+  <div id="landingPosterPage" class="w-full min-h-screen bg-zinc-950 flex justify-center items-center relative overflow-hidden select-none">
     
-    <!-- Top Floating Brand Header Wrapper -->
-    <div class="absolute top-0 left-0 w-full z-30 p-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
-      <div class="flex items-center gap-3">
-        <img src="PacificBox.png" alt="PacificBox Logo" class="w-10 h-10 rounded-lg shadow-lg">
-        <div>
-          <h1 class="font-bold text-xl text-zinc-100 tracking-wide uppercase">PacificBox</h1>
-          <p class="text-xs text-zinc-400 font-medium">A Cinematic Stream Network</p>
-        </div>
-      </div>
-      <!-- Action button to enter the main collection view -->
-      <button onclick="enterTheVault()" class="bg-amber-500 hover:bg-amber-600 text-zinc-950 font-black text-xs px-5 py-2.5 rounded-full shadow-xl transition-all duration-200 uppercase tracking-widest border border-amber-400/20">
-        Enter The Vault
-      </button>
-    </div>
+    <!-- Your One-Piece Master Artwork Graphic -->
+    <img src="landing-poster.png" alt="PacificBox Hub Poster" class="w-full h-full min-h-screen object-cover absolute inset-0 z-10">
 
-    <!-- COLUMN 1: COURTROOM DRAMA -->
-    <div class="flex-1 relative min-h-[20vh] md:min-h-screen group border-b md:border-b-0 md:border-r border-zinc-900/60 overflow-hidden transition-all duration-500 hover:flex-[1.4]">
-      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-black/40 z-10"></div>
-      <img src="https://unsplash.com" alt="Courtroom" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60">
-      <div class="absolute bottom-0 left-0 w-full p-6 z-20 text-center md:text-left">
-        <span class="text-[10px] text-amber-500 font-black tracking-widest uppercase">Genre Pillar</span>
-        <h2 class="text-xl md:text-2xl font-black text-white tracking-tight uppercase mt-1">Courtroom Drama</h2>
-      </div>
-    </div>
-
-    <!-- COLUMN 2: SCI-FI (Home of Double B) -->
-    <div onclick="enterTheVault()" class="flex-1 relative min-h-[20vh] md:min-h-screen group border-b md:border-b-0 md:border-r border-zinc-900/60 overflow-hidden transition-all duration-500 hover:flex-[1.4] cursor-pointer">
-      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/10 to-black/40 z-10 border-t-2 md:border-t-0 md:border-l-2 border-transparent group-hover:border-amber-500/80"></div>
-      <img src="doubleb-poster.png" alt="Sci-Fi" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80">
-      <div class="absolute bottom-0 left-0 w-full p-6 z-20 text-center md:text-left">
-        <span class="text-[10px] text-amber-500 font-black tracking-widest uppercase">Featured Series</span>
-        <h2 class="text-xl md:text-2xl font-black text-white tracking-tight uppercase mt-1">Sci-Fi Hub</h2>
-      </div>
-    </div>
-
-    <!-- COLUMN 3: CHILDREN -->
-    <div class="flex-1 relative min-h-[20vh] md:min-h-screen group border-b md:border-b-0 md:border-r border-zinc-900/60 overflow-hidden transition-all duration-500 hover:flex-[1.4]">
-      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-black/40 z-10"></div>
-      <img src="https://unsplash.com" alt="Children" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-50">
-      <div class="absolute bottom-0 left-0 w-full p-6 z-20 text-center md:text-left">
-        <span class="text-[10px] text-amber-500 font-black tracking-widest uppercase">Creative Vault</span>
-        <h2 class="text-xl md:text-2xl font-black text-white tracking-tight uppercase mt-1">Children Content</h2>
-      </div>
-    </div>
-
-    <!-- COLUMN 4: CORPORATE DRAMA -->
-    <div class="flex-1 relative min-h-[20vh] md:min-h-screen group border-b md:border-b-0 md:border-r border-zinc-900/60 overflow-hidden transition-all duration-500 hover:flex-[1.4]">
-      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-black/40 z-10"></div>
-      <img src="https://unsplash.com" alt="Corporate" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-50">
-      <div class="absolute bottom-0 left-0 w-full p-6 z-20 text-center md:text-left">
-        <span class="text-[10px] text-amber-500 font-black tracking-widest uppercase">Premium Series</span>
-        <h2 class="text-xl md:text-2xl font-black text-white tracking-tight uppercase mt-1">Corporate Drama</h2>
-      </div>
-    </div>
-
-    <!-- COLUMN 5: TALKBACK -->
-    <div class="flex-1 relative min-h-[20vh] md:min-h-screen group overflow-hidden transition-all duration-500 hover:flex-[1.4]">
-      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-black/40 z-10"></div>
-      <img src="https://unsplash.com" alt="Talkback" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-50">
-      <div class="absolute bottom-0 left-0 w-full p-6 z-20 text-center md:text-left">
-        <span class="text-[10px] text-amber-500 font-black tracking-widest uppercase">Live Broadcast</span>
-        <h2 class="text-xl md:text-2xl font-black text-white tracking-tight uppercase mt-1">TalkBack Panel</h2>
-      </div>
-    </div>
+    <!-- Invisible Active Hotspot (Sits directly on top of your artwork's CATALOG button) -->
+    <div class="absolute top-[2%] right-[2%] z-20 w-[15%] h-[8%] md:w-[12%] md:h-[6%] cursor-pointer bg-transparent" onclick="enterTheVault()" title="Enter The Vault"></div>
 
   </div>
-  <!-- ======================================================== -->
-  <!-- LEVEL 1: THE PACIFICBOX MAIN CATALOG (HOME ENTRANCE)      -->
-  <!-- ======================================================== -->
   <div id="catalogPage" class="hidden w-full max-w-4xl mx-auto p-4 md:p-8 flex flex-col gap-6">
     <!-- Main Branding Header -->
     <header class="flex justify-between items-center border-b border-zinc-800 pb-4">
