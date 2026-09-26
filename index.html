@@ -3,196 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PacificBox - Double B</title>
-  <link rel="icon" type="image/png" href="PacificBox.png">
-  <link rel="apple-touch-icon" href="PacificBox.png">
-  <link rel="manifest" href="manifest.json">
-  <!-- FIX: Corrected CDN engine link -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Open scrolling layout for all devices - no more locked vaults */
-    html, body {
-      background-color: #09090b;
-      background-image: url('landing-poster.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #fafafa;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      overflow-y: auto !important; /* Forces scroll bar to always work */
-    }
-  </style>
+  <title>PacificBox - Cinematic Stream Network</title>
+  <script src="https://tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-950 text-zinc-50 font-sans antialiased min-h-screen overflow-y-auto select-none">
+<body class="bg-zinc-950 text-zinc-50 font-sans antialiased min-h-screen p-6 select-none">
 
-    <!-- ======================================================== -->
-  <!-- LEVEL 0: THE PACIFICBOX MAIN LANDING POSTER               -->
-  <!-- ======================================================== -->
-  <div id="landingPosterPage" class="w-full max-w-[1920px] mx-auto bg-zinc-950 flex flex-col justify-start items-center relative overflow-hidden select-none">
-    
-       <!-- Fluid Image Wrapper: Matches your Double B poster behavior -->
-    <div class="w-full aspect-[16/9] relative z-10 shadow-2xl">
-      <img src="landing-poster.png" alt="PacificBox Hub Poster" class="w-full h-full object-contain">
-      
-      <!-- Interactive, Standalone HTML Button Component -->
-      <button 
-        onclick="enterTheVault()" 
-        title="Enter The Vault"
-        class="absolute top-[5%] right-[3%] w-[13%] h-[7%] min-h-[32px] max-h-[50px] min-w-[100px] max-w-[160px] bg-[#1e293b]/90 hover:bg-[#334155] active:scale-95 text-zinc-100 hover:text-white font-bold rounded-full border border-zinc-700/50 shadow-2xl transition duration-200 uppercase tracking-widest text-[min(1vw,12px)] flex items-center justify-center">
-        The Vault
-      </button>
-    </div>
-
-  </div>
-  <div id="catalogPage" class="absolute bottom-[10%] left-[4%] w-[18%] aspect-[2/3] z-20 cursor-pointer hover:scale-105 transition shadow-2xl" onclick="openSeries()">
-    <img src="historical.png" alt="Historical Thriller" class="w-full h-full object-cover rounded-xl border border-zinc-800">
-          
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- ======================================================== -->
-  <!-- LEVEL 2 & 3: THE DOUBLE B STREAMING PLAYER DASHBOARD     -->
-  <!-- ======================================================== -->
-   <div id="seriesPage" class="hidden w-full max-w-4xl mx-auto p-4 md:p-8 flex flex-col gap-6">
-    
-    <!-- Header with a clean navigation link back to the catalog main hub -->
-    <header class="flex justify-between items-center border-b border-zinc-800 pb-4">
+  <!-- HEADER SECTION -->
+  <header class="max-w-6xl mx-auto flex justify-between items-center border-b border-zinc-900 pb-6 mb-8">
+    <div class="flex items-center gap-3">
+      <!-- Cloudflare Logo Image Link -->
+      <img src="https://r2.dev" alt="PacificBox Logo" class="w-10 h-10">
       <div>
-        <h1 class="font-bold text-2xl text-amber-500 tracking-wide uppercase">DOUBLE B</h1>
-        <p class="text-xs text-zinc-400 font-medium">Loyalty, Land & Freedom</p>
+        <h1 class="font-bold text-xl tracking-wider text-white">PACIFICBOX</h1>
+        <p class="text-[10px] text-zinc-500 uppercase tracking-widest">Cinematic Stream Network</p>
       </div>
-      <button onclick="goHome()" class="bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white text-xs px-3 py-1.5 rounded-full font-bold border border-zinc-800 transition duration-200 uppercase tracking-wider flex items-center gap-1">
-        ← Exit to Catalog
-      </button>
-    </header>
-
-      <!-- Widescreen Video / Poster Presentation Frame -->
-    <div id="mediaBox" class="w-full bg-black rounded-xl overflow-hidden shadow-2xl border border-zinc-800/50 aspect-video relative flex items-center justify-center">
-      
-      <!-- LEVEL 2: Static Poster Thumbnail state -->
-      <div id="posterScreen" class="absolute inset-0 z-10 w-full h-full cursor-pointer" onclick="startWithFirstEpisode()">
-        <img src="doubleb-poster.png" alt="Double B Poster Art" class="w-full h-full object-cover">
-      </div>
-
-      <!-- LEVEL 3: Core video streaming element -->
-      <video 
-        id="main-player" 
-        class="w-full h-full object-contain"
-        controls
-        preload="auto"
-        playsinline
-        webkit-playsinline
-        src="">
-      </video>
     </div>
+  </header>
 
-    <!-- Premium Dashboard Selection Grid Section -->
-    <main class="bg-zinc-900/50 border border-zinc-800/50 rounded-xl p-6 flex flex-col gap-4">
-      <div>
-        <h2 id="episode-title" class="font-bold text-lg text-zinc-100">Ready to Stream</h2>
-        <p class="text-sm text-zinc-400">PacificBox Production</p>
+  <!-- MAIN CATALOG CONTENT -->
+  <main class="max-w-6xl mx-auto flex flex-col gap-10">
+
+    <!-- HISTORICAL THRILLER GENRE SECTION -->
+    <section>
+      <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-4">Historical Thriller</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <!-- Double B Show Card Button -->
+        <div onclick="openVideoPlayer()" class="bg-zinc-900/40 border border-zinc-900 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 shadow-xl group">
+          <div class="aspect-[16/9] w-full bg-zinc-950">
+            <!-- Cloudflare Poster Artwork Link -->
+            <img src="https://r2.dev" alt="Double B Poster" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-sm text-zinc-200 group-hover:text-amber-500 transition">Double B</h3>
+            <p class="text-[11px] text-zinc-500 mt-0.5">Loyalty, Land & Freedom</p>
+          </div>
+        </div>
+
+        <!-- Project Orion Placeholder -->
+        <div class="bg-zinc-900/10 border border-zinc-900/50 rounded-xl aspect-[16/11] flex items-center justify-center border-dashed">
+          <span class="text-xs font-bold text-zinc-700 tracking-widest uppercase">Project Orion</span>
+        </div>
+
       </div>
-      
-      <div class="flex flex-col gap-2">
-        <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-wider">Select Episode</h3>
-        <!-- Horizontal scrolling stream selections -->
-        <div class="flex gap-3 overflow-x-auto pb-2">
-          <button id="btn-ep1" onclick="changeVideo('Pilot: Double B Station', 'episode1.mp4', this)" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-5 py-2.5 rounded-lg shrink-0 text-xs font-bold transition duration-200">Pilot</button>
-          <button id="btn-ep2" onclick="changeVideo('Episode 2: The Confrontation', 'episode2.mp4', this)" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-5 py-2.5 rounded-lg shrink-0 text-xs font-bold transition duration-200">Episode 2</button>
-          <button id="btn-ep3" onclick="changeVideo('Episode 3: The Threat Intensifies', 'episode3.mp4', this)" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-5 py-2.5 rounded-lg shrink-0 text-xs font-bold transition duration-200">Episode 3</button>
+    </section>
+
+    <!-- LEGAL DRAMA GENRE SECTION -->
+    <section>
+      <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-4">Legal Drama</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-zinc-900/10 border border-zinc-900/50 rounded-xl aspect-[16/11] flex items-center justify-center border-dashed">
+          <span class="text-xs font-bold text-zinc-700 tracking-widest uppercase">Coming Soon</span>
         </div>
       </div>
-    </main>
+    </section>
 
+  </main>
+
+  <!-- OVERLAY CINEMATIC VIDEO PLAYER DIALOG CONTAINER -->
+  <div id="videoModal" class="hidden fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-4xl flex flex-col gap-4">
+      <div class="flex justify-between items-center">
+        <h2 class="font-bold text-lg text-amber-500 uppercase tracking-wide">Double B - Pilot</h2>
+        <button onclick="closeVideoPlayer()" class="bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white text-xs px-4 py-2 rounded-full font-bold transition uppercase tracking-wider">
+          ✕ Close Player
+        </button>
+      </div>
+      <div class="w-full aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
+        <!-- Cloudflare Video Stream Link -->
+        <video id="main-player" class="w-full h-full object-contain" controls preload="auto" src=""></video>
+      </div>
+    </div>
   </div>
 
-  <!-- ======================================================== -->
-  <!-- CONTROL LOGIC RUNNERS                                    -->
-  <!-- ======================================================== -->
+  <!-- CORE APP INTERACTION CONTROL SCRIPTS -->
   <script>
-    // Service Worker Activation 
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('Service Worker registered successfully:', reg.scope))
-          .catch(err => console.log('Service Worker registration failed:', err));
-      });
+    function openVideoPlayer() {
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('main-player');
+      modal.classList.remove('hidden');
+      player.src = "https://r2.dev";
+      player.load();
+      player.play().catch(err => console.log("Playback interaction handled:", err));
     }
 
-            // Navigation: Enter Double B view
-    function openSeries() {
-      document.getElementById('landingPosterPage').style.display = 'none'; // <-- Complete nuclear shutoff for Page 1 elements
-      document.getElementById('catalogPage').classList.add('hidden');
-      document.getElementById('seriesPage').classList.remove('hidden');
-      resetToPosterState();
-    }
-
-    // Navigation: Return to Main Hub Entrance
-        // Navigation: Transition from 5-Column Poster into the Vault Rows
-    function enterTheVault() {
-      document.getElementById('landingPosterPage').classList.add('hidden');
-      document.getElementById('catalogPage').classList.remove('hidden');
-    }
-
-    // Navigation: Return all the way out to the Main Landing Poster
-    function goHome() {
+    function closeVideoPlayer() {
+      const modal = document.getElementById('videoModal');
       const player = document.getElementById('main-player');
       player.pause();
-      document.getElementById('seriesPage').classList.add('hidden');
-      document.getElementById('catalogPage').classList.add('hidden');
-      document.getElementById('landingPosterPage').classList.remove('hidden');
-    }
-
-    // Helper: Reset view back to the custom menu poster screen
-    function resetToPosterState() {
-      document.getElementById('posterScreen').classList.remove('hidden');
-      document.getElementById('episode-title').innerText = "Ready to Stream";
-      
-      // Clear all active selection styles from buttons
-      resetButtonStyles();
-    }
-
-    // Quick helper to strip amber highlight style from buttons
-    function resetButtonStyles() {
-      const buttons = [document.getElementById('btn-ep1'), document.getElementById('btn-ep2'), document.getElementById('btn-ep3')];
-      buttons.forEach(btn => {
-        if(btn) {
-          btn.className = "bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-5 py-2.5 rounded-lg shrink-0 text-xs font-bold transition duration-200";
-        }
-      });
-    }
-
-    // Automatically click first choice if someone taps on the poster image banner directly
-    function startWithFirstEpisode() {
-      const ep1Btn = document.getElementById('btn-ep1');
-      changeVideo('Pilot: Double B Station', 'episode1.mp4', ep1Btn);
-    }
-
-    // Unified Episode Trigger Control
-    function changeVideo(title, videoUrl, element) {
-      // 1. Hide the visual thumbnail poster cover to unveil the player element underneath
-      document.getElementById('posterScreen').classList.add('hidden');
-      
-      // 2. Adjust titles and direct source targets
-      document.getElementById('episode-title').innerText = title;
-      const player = document.getElementById('main-player');
-      player.src = videoUrl;
-      player.preload = "auto";
-      player.load();
-      
-      // 3. Reset styling highlights and add the glowing Amber look onto the chosen button
-      resetButtonStyles();
-      if(element) {
-        element.className = "bg-amber-600 hover:bg-amber-700 text-black px-5 py-2.5 rounded-lg shrink-0 text-xs font-bold transition duration-200 shadow-md";
-      }
-
-      // 4. Play tracking stream
-      player.play().catch(error => { console.log(error); });
+      player.src = "";
+      modal.classList.add('hidden');
     }
   </script>
 
