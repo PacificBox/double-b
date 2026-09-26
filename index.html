@@ -1,1 +1,19 @@
-PacificBox - Cinematic Stream NetworkPACIFICBOXCinematic Stream NetworkDouble B - Pilot✕ Close Playerfunction openVideoPlayer() {const modal = document.getElementById('videoModal');const player = document.getElementById('main-player');modal.style.setProperty('display', 'flex', 'important');player.src = "episode1.mp4";player.load();player.play().catch(err => console.log("Playback interaction handled:", err));}function closeVideoPlayer() {const modal = document.getElementById('videoModal');const player = document.getElementById('main-player');player.pause();player.src = "";modal.style.setProperty('display', 'none', 'important');}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PacificBox - Cinematic Stream Network</title>
+  <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-gray-950 text-gray-50 min-h-screen p-6 select-none" style="background-color: #0b0f19;">
+
+  <header class="max-w-6xl mx-auto flex justify-between items-center border-b border-gray-900 pb-6 mb-8">
+    <div class="flex items-center gap-3">
+      <img src="PacificBox.png" alt="PacificBox Logo" class="w-12 h-12 object-contain">
+      <div>
+        <h1 class="font-bold text-xl tracking-wider text-white">PACIFICBOX</h1>
+        <p class="text-xs text-gray-500 uppercase tracking-widest">Cinematic Stream Network</p>
+      </div>
+    </div>
+  </header>
