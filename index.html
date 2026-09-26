@@ -17,3 +17,39 @@
       </div>
     </div>
   </header>
+ 
+  <main class="max-w-6xl mx-auto flex flex-col gap-10">
+
+    <section class="mb-10">
+      <h2 class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-4">Historical Thriller</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <!-- Double B Card -->
+        <div onclick="openVideoPlayer()" class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300 shadow-xl group">
+          <div class="w-full bg-black" style="aspect-ratio: 16/9;">
+            <img src="doubleb-poster.png" alt="Double B Poster" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-sm text-gray-200 group-hover:text-yellow-500 transition">Double B</h3>
+            <p class="text-xs text-gray-500 mt-1">Loyalty, Land & Freedom</p>
+          </div>
+        </div>
+
+        <!-- Project Orion Placeholder -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-xl flex items-center justify-center p-8 border-dashed" style="aspect-ratio: 16/11;">
+          <span class="text-xs font-bold text-gray-700 tracking-widest uppercase">Project Orion</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-4">Legal Drama</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-gray-900/50 border border-gray-800 rounded-xl flex items-center justify-center p-8 border-dashed" style="aspect-ratio: 16/11;">
+          <span class="text-xs font-bold text-gray-700 tracking-widest uppercase">Coming Soon</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
