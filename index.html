@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PacificBox - Cinematic Stream Network</title>
   
-  <!-- Stable Tailwind CSS v4 Standalone Engine -->
-  <script src="https://jsdelivr.net"></script>
+  <!-- Rock-Solid Tailwind CSS Engine Delivery Link -->
+  <link rel="stylesheet" href="https://cloudflare.com">
 </head>
-<body class="bg-zinc-950 text-zinc-50 font-sans antialiased min-h-screen p-6 select-none">
+<body class="bg-gray-950 text-gray-50 min-h-screen p-6 select-none" style="background-color: #0b0f19;">
 
   <!-- HEADER SECTION -->
-  <header class="max-w-6xl mx-auto flex justify-between items-center border-b border-zinc-900 pb-6 mb-8">
+  <header class="max-w-6xl mx-auto flex justify-between items-center border-b border-gray-900 pb-6 mb-8">
     <div class="flex items-center gap-3">
-      <!-- GRAPHIC REFERENCE: LOGO IMAGE -->
-      <img src="PacificBox.png" alt="PacificBox Logo" class="w-10 h-10 object-contain">
+      <!-- Your Local Logo File -->
+      <img src="PacificBox.png" alt="PacificBox Logo" class="w-12 h-12 object-contain">
       <div>
         <h1 class="font-bold text-xl tracking-wider text-white">PACIFICBOX</h1>
-        <p class="text-[10px] text-zinc-500 uppercase tracking-widest">Cinematic Stream Network</p>
+        <p class="text-xs text-gray-500 uppercase tracking-widest">Cinematic Stream Network</p>
       </div>
     </div>
   </header>
@@ -26,25 +26,25 @@
   <main class="max-w-6xl mx-auto flex flex-col gap-10">
 
     <!-- HISTORICAL THRILLER GENRE SECTION -->
-    <section>
-      <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-4">Historical Thriller</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <section class="mb-10">
+      <h2 class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-4">Historical Thriller</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         
         <!-- Double B Show Card Button -->
-        <div onclick="openVideoPlayer()" class="bg-zinc-900/40 border border-zinc-900 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 shadow-xl group">
-          <div class="aspect-[16/9] w-full bg-zinc-950">
-            <!-- GRAPHIC REFERENCE: POSTER IMAGE -->
+        <div onclick="openVideoPlayer()" class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300 shadow-xl group">
+          <div class="w-full bg-black" style="aspect-ratio: 16/9;">
+            <!-- Your Local Poster Image File -->
             <img src="doubleb-poster.png" alt="Double B Poster" class="w-full h-full object-cover">
           </div>
           <div class="p-4">
-            <h3 class="font-bold text-sm text-zinc-200 group-hover:text-amber-500 transition">Double B</h3>
-            <p class="text-[11px] text-zinc-500 mt-0.5">Loyalty, Land & Freedom</p>
+            <h3 class="font-bold text-sm text-gray-200 group-hover:text-yellow-500 transition">Double B</h3>
+            <p class="text-xs text-gray-500 mt-1">Loyalty, Land & Freedom</p>
           </div>
         </div>
 
         <!-- Project Orion Placeholder -->
-        <div class="bg-zinc-900/10 border border-zinc-900/50 rounded-xl aspect-[16/11] flex items-center justify-center border-dashed">
-          <span class="text-xs font-bold text-zinc-700 tracking-widest uppercase">Project Orion</span>
+        <div class="bg-gray-900/50 border border-gray-800 rounded-xl flex items-center justify-center p-8 border-dashed" style="aspect-ratio: 16/11;">
+          <span class="text-xs font-bold text-gray-700 tracking-widest uppercase">Project Orion</span>
         </div>
 
       </div>
@@ -52,10 +52,10 @@
 
     <!-- LEGAL DRAMA GENRE SECTION -->
     <section>
-      <h2 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-4">Legal Drama</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-zinc-900/10 border border-zinc-900/50 rounded-xl aspect-[16/11] flex items-center justify-center border-dashed">
-          <span class="text-xs font-bold text-zinc-700 tracking-widest uppercase">Coming Soon</span>
+      <h2 class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-4">Legal Drama</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-gray-900/50 border border-gray-800 rounded-xl flex items-center justify-center p-8 border-dashed" style="aspect-ratio: 16/11;">
+          <span class="text-xs font-bold text-gray-700 tracking-widest uppercase">Coming Soon</span>
         </div>
       </div>
     </section>
@@ -63,15 +63,15 @@
   </main>
 
   <!-- OVERLAY CINEMATIC VIDEO PLAYER DIALOG CONTAINER -->
-  <div id="videoModal" class="hidden fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-4">
+  <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center justify-center p-4">
     <div class="w-full max-w-4xl flex flex-col gap-4">
-      <div class="flex justify-between items-center">
-        <h2 class="font-bold text-lg text-amber-500 uppercase tracking-wide">Double B - Pilot</h2>
-        <button onclick="closeVideoPlayer()" class="bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white text-xs px-4 py-2 rounded-full font-bold transition uppercase tracking-wider">
+      <div class="flex justify-between items-center w-full mb-2">
+        <h2 class="font-bold text-lg text-yellow-500 uppercase tracking-wide">Double B - Pilot</h2>
+        <button onclick="closeVideoPlayer()" class="bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white text-xs px-4 py-2 rounded-full font-bold transition uppercase tracking-wider">
           ✕ Close Player
         </button>
       </div>
-      <div class="w-full aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
+      <div class="w-full bg-black rounded-xl overflow-hidden border border-gray-800 shadow-2xl" style="aspect-ratio: 16/9;">
         <!-- Local Video Stream Source -->
         <video id="main-player" class="w-full h-full object-contain" controls preload="auto" src=""></video>
       </div>
@@ -84,6 +84,7 @@
       const modal = document.getElementById('videoModal');
       const player = document.getElementById('main-player');
       modal.classList.remove('hidden');
+      modal.style.display = 'flex';
       player.src = "episode1.mp4"; 
       player.load();
       player.play().catch(err => console.log("Playback interaction handled:", err));
@@ -95,6 +96,7 @@
       player.pause();
       player.src = "";
       modal.classList.add('hidden');
+      modal.style.display = 'none';
     }
   </script>
 
