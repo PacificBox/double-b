@@ -55,7 +55,6 @@
   <div class="wrapper">
     <header class="main-header">
       <div class="brand">
-        <!-- CONNECTED TO YOUR CLOUDFLARE R2 LOGO -->
         <img src="PacificBox.png" alt="PacificBox Logo" class="brand-logo">
         <div>
           <h1 class="brand-title">PACIFICBOX</h1>
@@ -64,18 +63,13 @@
       </div>
     </header>
     
-    <!-- GENRE CATALOG LAYOUT GRID -->
     <main>
-      
-      <!-- HISTORICAL THRILLER SECTION -->
       <section style="margin-bottom: 48px;">
         <h2 style="font-size: 11px; font-weight: 800; color: #d4af37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">Historical Thriller</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px;">
           
-          <!-- Double B Clickable Show Card -->
           <div onclick="openVideoPlayer()" style="background-color: #0f131a; border: 1px solid #1f2937; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
             <div style="aspect-ratio: 16/9; width: 100%; background-color: #000000;">
-              <!-- CONNECTED TO YOUR CLOUDFLARE R2 POSTER -->
               <img src="doubleb-poster.webp" alt="Double B Poster" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div style="padding: 16px;">
@@ -84,7 +78,6 @@
             </div>
           </div>
 
-          <!-- Project Orion Empty Template Box -->
           <div style="background-color: rgba(15, 19, 26, 0.4); border: 1px dashed #1f2937; border-radius: 12px; aspect-ratio: 16/11; display: flex; align-items: center; justify-content: center;">
             <span style="font-size: 11px; font-weight: 700; color: #374151; letter-spacing: 1px; text-transform: uppercase;">Project Orion</span>
           </div>
@@ -92,26 +85,21 @@
         </div>
       </section>
 
-      <!-- LEGAL DRAMA SECTION -->
       <section style="margin-bottom: 48px;">
         <h2 style="font-size: 11px; font-weight: 800; color: #d4af37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">Legal Drama</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px;">
           
-          <!-- Coming Soon Empty Template Box -->
           <div style="background-color: rgba(15, 19, 26, 0.4); border: 1px dashed #1f2937; border-radius: 12px; aspect-ratio: 16/11; display: flex; align-items: center; justify-content: center; width: 260px;">
             <span style="font-size: 11px; font-weight: 700; color: #374151; letter-spacing: 1px; text-transform: uppercase;">Coming Soon</span>
           </div>
 
         </div>
       </section>
-
     </main>
     
-    <!-- NATIVE CINEMA VIDEO OVERLAY MODAL -->
     <div id="videoModal" style="display: none; position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.95); z-index: 100; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
       <div style="width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 16px;">
         
-        <!-- Player Header Controls -->
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <h2 style="font-size: 16px; font-weight: 800; color: #ea580c; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Double B - Pilot</h2>
           <button onclick="closeVideoPlayer()" style="background-color: #1f2937; color: #ffffff; border: 1px solid #374151; font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 8px 16px; border-radius: 20px; cursor: pointer;">
@@ -119,7 +107,6 @@
           </button>
         </div>
 
-        <!-- Video Player Frame -->
         <div style="width: 100%; aspect-ratio: 16/9; background-color: #000000; border-radius: 12px; overflow: hidden; border: 1px solid #111827; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
           <video id="main-player" style="width: 100%; height: 100%; object-fit: contain;" controls preload="auto" src=""></video>
         </div>
@@ -127,16 +114,14 @@
       </div>
     </div>
 
-  </div> <!-- Closes .wrapper -->
+  </div>
 
-  <!-- NATIVE COMPACT COMPONENT INTERACTION CONTROLS -->
   <script>
     function openVideoPlayer() {
       const modal = document.getElementById('videoModal');
       const player = document.getElementById('main-player');
       modal.style.display = 'flex';
-      <!-- CONNECTED TO YOUR CLOUDFLARE R2 VIDEO LINK -->
-       player.src = "https://r2.dev";
+      player.src = "https://r2.dev"; 
       player.load();
       player.play().catch(err => console.log("Playback interaction handled safely:", err));
     }
