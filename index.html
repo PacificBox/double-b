@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PacificBox - Cinematic Stream Network</title>
   
-  <!-- Tells the browser to safely look inside your subfolder repository on GitHub Pages -->
-  <base href="/double-b/">
-
-  <!-- The official, stable Tailwind CSS v4 Browser Engine Link -->
+  <!-- Stable Tailwind CSS v4 Standalone Engine -->
   <script src="https://jsdelivr.net"></script>
 </head>
 <body class="bg-zinc-950 text-zinc-50 font-sans antialiased min-h-screen p-6 select-none">
@@ -16,8 +13,8 @@
   <!-- HEADER SECTION -->
   <header class="max-w-6xl mx-auto flex justify-between items-center border-b border-zinc-900 pb-6 mb-8">
     <div class="flex items-center gap-3">
-      <!-- Pointing to your local logo file -->
-      <img src="logo.png" alt="PacificBox Logo" class="w-10 h-10 object-contain" onerror="this.src='assets/logo.png'">
+      <!-- GRAPHIC REFERENCE: LOGO IMAGE -->
+      <img src="PacificBox.png" alt="PacificBox Logo" class="w-10 h-10 object-contain">
       <div>
         <h1 class="font-bold text-xl tracking-wider text-white">PACIFICBOX</h1>
         <p class="text-[10px] text-zinc-500 uppercase tracking-widest">Cinematic Stream Network</p>
@@ -36,8 +33,8 @@
         <!-- Double B Show Card Button -->
         <div onclick="openVideoPlayer()" class="bg-zinc-900/40 border border-zinc-900 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition duration-300 shadow-xl group">
           <div class="aspect-[16/9] w-full bg-zinc-950">
-            <!-- Pointing to your local poster file -->
-            <img src="poster.jpg" alt="Double B Poster" class="w-full h-full object-cover" onerror="this.src='assets/poster.jpg'">
+            <!-- GRAPHIC REFERENCE: POSTER IMAGE -->
+            <img src="doubleb-poster.png" alt="Double B Poster" class="w-full h-full object-cover">
           </div>
           <div class="p-4">
             <h3 class="font-bold text-sm text-zinc-200 group-hover:text-amber-500 transition">Double B</h3>
@@ -75,7 +72,7 @@
         </button>
       </div>
       <div class="w-full aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
-        <!-- Local Video Stream -->
+        <!-- Local Video Stream Source -->
         <video id="main-player" class="w-full h-full object-contain" controls preload="auto" src=""></video>
       </div>
     </div>
@@ -87,7 +84,6 @@
       const modal = document.getElementById('videoModal');
       const player = document.getElementById('main-player');
       modal.classList.remove('hidden');
-      // Pointing directly to your local file path
       player.src = "episode1.mp4"; 
       player.load();
       player.play().catch(err => console.log("Playback interaction handled:", err));
