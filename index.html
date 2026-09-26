@@ -3,81 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PacificBox - Cinematic Stream Network</title>
-  <link rel="stylesheet" href="https://cloudflare.com">
+  <title>PacificBox - Double B</title>
+  <style>
+    body {
+      background-color: #06080f;
+      color: #f3f4f6;
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 32px;
+      margin: 0;
+    }
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #111827;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 0;
+      color: #ffffff;
+    }
+    .brand-tag {
+      font-size: 10px;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 2px 0 0 0;
+    }
+    .catalog-btn {
+      background-color: #1f2937;
+      color: #9ca3af;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 18px;
+      border-radius: 20px;
+      border: 1px solid #374151;
+    }
+  </style>
 </head>
-<body class="bg-gray-950 text-gray-50 min-h-screen p-6 select-none" style="background-color: #0b0f19;">
+<body>
 
-  <header class="max-w-6xl mx-auto flex justify-between items-center border-b border-gray-900 pb-6 mb-8">
-    <div class="flex items-center gap-3">
-      <img src="PacificBox.png" alt="PacificBox Logo" class="w-12 h-12 object-contain">
-      <div>
-        <h1 class="font-bold text-xl tracking-wider text-white">PACIFICBOX</h1>
-        <p class="text-xs text-gray-500 uppercase tracking-widest">Cinematic Stream Network</p>
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="brand">
+        <!-- Connecting straight to your Git file -->
+        <img src="PacificBox.png" alt="PacificBox Logo" class="brand-logo">
+        <div>
+          <h1 class="brand-title">PACIFICBOX</h1>
+          <p class="brand-tag">Cinematic Stream Network</p>
+        </div>
       </div>
-    </div>
-  </header>
- 
-  <main class="max-w-6xl mx-auto flex flex-col gap-10">
+      <button class="catalog-btn">Catalog</button>
+    </header>
+    
+    <!-- GENRE CATALOG LAYOUT GRID -->
+    <main>
+      
+      <!-- HISTORICAL THRILLER SECTION -->
+      <section style="margin-bottom: 48px;">
+        <h2 style="font-size: 11px; font-weight: 800; color: #ea580c; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">Historical Thriller</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px;">
+          
+          <!-- Double B Clickable Show Card -->
+          <div onclick="openVideoPlayer()" style="background-color: #0f131a; border: 1px solid #1f2937; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="aspect-ratio: 16/9; width: 100%; background-color: #000000;">
+              <!-- Connecting directly to your Git image -->
+              <img src="doubleb-poster.png" alt="Double B Poster" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 16px;">
+              <h3 style="font-size: 14px; font-weight: 700; color: #ffffff; margin: 0;">Double B</h3>
+              <p style="font-size: 11px; color: #6b7280; margin: 4px 0 0 0;">Loyalty, Land & Freedom</p>
+            </div>
+          </div>
 
-    <section class="mb-10">
-      <h2 class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-4">Historical Thriller</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Project Orion Empty Template Box -->
+          <div style="background-color: rgba(15, 19, 26, 0.4); border: 1px dashed #1f2937; border-radius: 12px; aspect-ratio: 16/11; display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 11px; font-weight: 700; color: #374151; letter-spacing: 1px; text-transform: uppercase;">Project Orion</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LEGAL DRAMA SECTION -->
+      <section style="margin-bottom: 48px;">
+        <h2 style="font-size: 11px; font-weight: 800; color: #ea580c; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">Legal Drama</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px;">
+          
+          <!-- Coming Soon Empty Template Box -->
+          <div style="background-color: rgba(15, 19, 26, 0.4); border: 1px dashed #1f2937; border-radius: 12px; aspect-ratio: 16/11; display: flex; align-items: center; justify-content: center; width: 260px;">
+            <span style="font-size: 11px; font-weight: 700; color: #374151; letter-spacing: 1px; text-transform: uppercase;">Coming Soon</span>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+    
+    <!-- NATIVE CINEMA VIDEO OVERLAY MODAL -->
+    <div id="videoModal" style="display: none; position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.95); z-index: 100; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+      <div style="width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 16px;">
         
-        <!-- Double B Card -->
-        <div onclick="openVideoPlayer()" class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300 shadow-xl group">
-          <div class="w-full bg-black" style="aspect-ratio: 16/9;">
-            <img src="doubleb-poster.png" alt="Double B Poster" class="w-full h-full object-cover">
-          </div>
-          <div class="p-4">
-            <h3 class="font-bold text-sm text-gray-200 group-hover:text-yellow-500 transition">Double B</h3>
-            <p class="text-xs text-gray-500 mt-1">Loyalty, Land & Freedom</p>
-          </div>
+        <!-- Player Header Controls -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2 style="font-size: 16px; font-weight: 800; color: #ea580c; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Double B - Pilot</h2>
+          <button onclick="closeVideoPlayer()" style="background-color: #1f2937; color: #ffffff; border: 1px solid #374151; font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 8px 16px; border-radius: 20px; cursor: pointer;">
+            ✕ Close Player
+          </button>
         </div>
 
-        <!-- Project Orion Placeholder -->
-        <div class="bg-gray-900/50 border border-gray-800 rounded-xl flex items-center justify-center p-8 border-dashed" style="aspect-ratio: 16/11;">
-          <span class="text-xs font-bold text-gray-700 tracking-widest uppercase">Project Orion</span>
+        <!-- Video Player Frame -->
+        <div style="width: 100%; aspect-ratio: 16/9; background-color: #000000; border-radius: 12px; overflow: hidden; border: 1px solid #111827; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+          <!-- Connecting straight to your Git video file -->
+          <video id="main-player" style="width: 100%; height: 100%; object-fit: contain;" controls preload="auto" src=""></video>
         </div>
 
-      </div>
-    </section>
-
-    <section>
-      <h2 class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-4">Legal Drama</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-gray-900/50 border border-gray-800 rounded-xl flex items-center justify-center p-8 border-dashed" style="aspect-ratio: 16/11;">
-          <span class="text-xs font-bold text-gray-700 tracking-widest uppercase">Coming Soon</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
- 
-  <!-- VIDEO OVERLAY DIALOG -->
-  <div id="videoModal" style="display: none !important;" class="fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center justify-center p-4">
-    <div class="w-full max-w-4xl flex flex-col gap-4">
-      <div class="flex justify-between items-center w-full mb-2">
-        <h2 class="font-bold text-lg text-yellow-500 uppercase tracking-wide">Double B - Pilot</h2>
-        <button onclick="closeVideoPlayer()" class="bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white text-xs px-4 py-2 rounded-full font-bold transition uppercase tracking-wider">
-          ✕ Close Player
-        </button>
-      </div>
-      <div class="w-full bg-black rounded-xl overflow-hidden border border-gray-800 shadow-2xl" style="aspect-ratio: 16/9;">
-        <video id="main-player" class="w-full h-full object-contain" controls preload="auto" src=""></video>
       </div>
     </div>
-  </div>
 
-  <!-- CONTROL INTERACTION CONTROLLERS -->
+  </div> <!-- Closes .wrapper -->
+
+  <!-- NATIVE COMPACT COMPONENT INTERACTION CONTROLS -->
   <script>
     function openVideoPlayer() {
       const modal = document.getElementById('videoModal');
       const player = document.getElementById('main-player');
-      modal.style.setProperty('display', 'flex', 'important');
+      modal.style.display = 'flex';
       player.src = "episode1.mp4"; 
       player.load();
-      player.play().catch(err => console.log("Playback interaction handled:", err));
+      player.play().catch(err => console.log("Playback interaction handled safely:", err));
     }
 
     function closeVideoPlayer() {
@@ -85,7 +158,7 @@
       const player = document.getElementById('main-player');
       player.pause();
       player.src = "";
-      modal.style.setProperty('display', 'none', 'important');
+      modal.style.display = 'none';
     }
   </script>
 
