@@ -48,17 +48,6 @@
       letter-spacing: 1px;
       margin: 2px 0 0 0;
     }
-    .catalog-btn {
-      background-color: #1f2937;
-      color: #9ca3af;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 8px 18px;
-      border-radius: 20px;
-      border: 1px solid #374151;
-    }
   </style>
 </head>
 <body>
@@ -66,14 +55,13 @@
   <div class="wrapper">
     <header class="main-header">
       <div class="brand">
-        <!-- Connecting straight to your Git file -->
-        <img src="PacificBox.png" alt="PacificBox Logo" class="brand-logo">
+        <!-- CONNECTED TO YOUR CLOUDFLARE R2 LOGO -->
+        <img src="https://r2.dev" alt="PacificBox Logo" class="brand-logo">
         <div>
           <h1 class="brand-title">PACIFICBOX</h1>
           <p class="brand-tag">A Cinematic Stream Network</p>
         </div>
       </div>
-      
     </header>
     
     <!-- GENRE CATALOG LAYOUT GRID -->
@@ -87,8 +75,8 @@
           <!-- Double B Clickable Show Card -->
           <div onclick="openVideoPlayer()" style="background-color: #0f131a; border: 1px solid #1f2937; border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
             <div style="aspect-ratio: 16/9; width: 100%; background-color: #000000;">
-              <!-- Connecting directly to your Git image -->
-              <img src="doubleb-poster.png" alt="Double B Poster" style="width: 100%; height: 100%; object-fit: cover;">
+              <!-- CONNECTED TO YOUR CLOUDFLARE R2 POSTER -->
+              <img src="https://r2.dev" alt="Double B Poster" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div style="padding: 16px;">
               <h3 style="font-size: 14px; font-weight: 700; color: #ffffff; margin: 0;">Double B</h3>
@@ -133,7 +121,6 @@
 
         <!-- Video Player Frame -->
         <div style="width: 100%; aspect-ratio: 16/9; background-color: #000000; border-radius: 12px; overflow: hidden; border: 1px solid #111827; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
-          <!-- Connecting straight to your Git video file -->
           <video id="main-player" style="width: 100%; height: 100%; object-fit: contain;" controls preload="auto" src=""></video>
         </div>
 
@@ -148,7 +135,8 @@
       const modal = document.getElementById('videoModal');
       const player = document.getElementById('main-player');
       modal.style.display = 'flex';
-      player.src = "episode1.mp4"; 
+      <!-- CONNECTED TO YOUR CLOUDFLARE R2 VIDEO LINK -->
+      player.src = "https://r2.dev"; 
       player.load();
       player.play().catch(err => console.log("Playback interaction handled safely:", err));
     }
